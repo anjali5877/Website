@@ -689,3 +689,256 @@ footer {
   text-align: center;
   padding: 15px;
 }
+
+/* =================== FULL MOBILE RESPONSIVE + ANIMATIONS =================== */
+
+/* --- Medium Screens (Tablets & small desktops) --- */
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+  .brand {
+    flex-direction: column;
+    gap: 8px;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  nav a {
+    margin: 5px 0;
+    font-size: 0.95rem;
+  }
+  .language-select {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 20px;
+  }
+  .hero-left, .hero-right {
+    width: 100%;
+  }
+  .hero-left h1 {
+    font-size: 1.5rem;
+  }
+  .hero-left h2 {
+    font-size: 1.2rem;
+  }
+  .hero-right input, .hero-right select, .hero-right textarea, .hero-right button {
+    font-size: 0.9rem;
+  }
+
+  /* Feature Cards */
+  .features {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  .feature-card {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .feature-icon {
+    margin-bottom: 10px;
+  }
+
+  /* Loan Calculator */
+  .loan-section {
+    padding: 30px 15px;
+  }
+  .loan-box {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .loan-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .loan-result {
+    font-size: 0.9rem;
+  }
+  table {
+    font-size: 0.85rem;
+  }
+
+  /* Branches */
+  .branches {
+    padding: 30px 15px;
+  }
+  .branch-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .branch-list span {
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* FAQ */
+  .faq-wrapper {
+    padding: 15px;
+  }
+  .faq-box {
+    width: 95%;
+    padding: 20px;
+  }
+  .faq-heading {
+    font-size: 1.5rem;
+  }
+  .faq-card {
+    padding: 15px 12px;
+  }
+  .faq-title {
+    font-size: 1rem;
+  }
+  .faq-content {
+    font-size: 0.9rem;
+  }
+
+  /* Contact */
+  .contact-area {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+  .contact-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contact-box {
+    width: 100%;
+  }
+  .map-box iframe {
+    height: 250px;
+  }
+  .whatsapp-button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .bottom-bar {
+    font-size: 0.75rem;
+    padding: 8px 5px;
+  }
+  .social-links a {
+    font-size: 0.8rem;
+  }
+}
+
+/* --- Extra Small Screens (<480px) --- */
+@media (max-width: 480px) {
+
+  header {
+    padding: 10px;
+  }
+  .hero {
+    padding: 15px 10px;
+    gap: 15px;
+  }
+  .hero-left h1 {
+    font-size: 1.3rem;
+  }
+  .hero-left h2 {
+    font-size: 1rem;
+  }
+  .hero-right {
+    padding: 15px;
+  }
+
+  .loan-box {
+    padding: 15px;
+  }
+  .loan-title {
+    font-size: 1.2rem;
+  }
+  .loan-input, .loan-select, .loan-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .feature-text h3 {
+    font-size: 0.95rem;
+  }
+  .feature-text p {
+    font-size: 0.85rem;
+  }
+
+  .branch-list span {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .faq-heading {
+    font-size: 1.3rem;
+  }
+  .faq-title {
+    font-size: 0.95rem;
+  }
+
+  .contact-title {
+    font-size: 1.3rem;
+  }
+  .contact-box {
+    padding: 12px;
+  }
+
+  /* Hero Right inputs & buttons stack fully */
+  .hero-right input, .hero-right select, .hero-right textarea {
+    width: 100%;
+  }
+  .hero-right button {
+    width: 100%;
+  }
+
+  /* Feature Card icons bigger on small screens */
+  .feature-icon {
+    font-size: 26px;
+    min-width: 45px;
+    min-height: 45px;
+  }
+
+  /* Loan Calculator table scrollable */
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  /* Branch Tags stacked */
+  .branch-tags span {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+  }
+}
+
+/* ===== Universal adjustments ===== */
+button, input, select, textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 74, 173, 0.3);
+}
